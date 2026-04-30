@@ -85,11 +85,11 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `dist/**`
 - Modify: `docs/superpowers/plans/2026-04-30-rule-model-enhancements.md`
 
-- [ ] **Step 1: Add category metadata to source rules**
+- [x] **Step 1: Add category metadata to source rules**
 
 Add `priority`, `enabled`, and concise `source` values to each existing category.
 
-- [ ] **Step 2: Regenerate outputs**
+- [x] **Step 2: Regenerate outputs**
 
 Run:
 
@@ -101,7 +101,7 @@ python -m unittest discover -s tests -v
 
 Expected: generated files reflect priority ordering and remain synchronized.
 
-- [ ] **Step 3: Commit and push**
+- [x] **Step 3: Commit and push**
 
 Run:
 
