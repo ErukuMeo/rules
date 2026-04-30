@@ -59,10 +59,21 @@ AI
 STREAMING
 APPLE
 MICROSOFT
+GOOGLE
+DEVELOPER
+GAMES
+DOWNLOAD
 FINAL
 ```
 
 规则只负责把请求分到这些策略组；每个策略组背后的节点由 Sub-Store 管理。
+
+新增策略组建议：
+
+- `GOOGLE`：Google 搜索、账号、API、Gmail 和静态资源。
+- `DEVELOPER`：Docker、npm、PyPI、JetBrains、Visual Studio 等开发相关服务。
+- `GAMES`：Steam、Epic、Battle.net、Xbox、PlayStation 等游戏平台服务。
+- `DOWNLOAD`：GitHub release、SourceForge、FossHub、Archive.org 等下载分发服务。
 
 ## 源规则元数据
 
@@ -93,7 +104,7 @@ python scripts/generate_rules.py
 
 1. 在 Sub-Store 中导入节点订阅。
 2. 用 Sub-Store 的重命名和脚本能力清洗节点名。
-3. 根据地区或用途创建策略组，例如 `PROXY`、`AI`、`STREAMING`。
+3. 根据地区或用途创建策略组，例如 `PROXY`、`AI`、`STREAMING`、`GOOGLE`、`DEVELOPER`、`GAMES`、`DOWNLOAD`。
 4. 生成客户端基础配置。
 5. 根据客户端类型合并本仓库的生成模板：
 

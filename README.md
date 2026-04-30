@@ -114,10 +114,21 @@ AI
 STREAMING
 APPLE
 MICROSOFT
+GOOGLE
+DEVELOPER
+GAMES
+DOWNLOAD
 FINAL
 ```
 
 规则负责决定请求进入哪个策略组；Sub-Store 负责把节点组织到这些策略组背后。
+
+新增分类用途：
+
+- `GOOGLE`：Google 搜索、账号、API、Gmail 和静态资源。
+- `DEVELOPER`：Docker、npm、PyPI、JetBrains、Visual Studio 等开发相关服务。
+- `GAMES`：Steam、Epic、Battle.net、Xbox、PlayStation 等游戏平台服务。
+- `DOWNLOAD`：GitHub release、SourceForge、FossHub、Archive.org 等下载分发服务。
 
 ## Sub-Store 接入方式
 
@@ -141,7 +152,7 @@ Sub-Store：
 
 1. 在 Sub-Store 中导入机场或节点订阅。
 2. 对节点做重命名、地区识别、过滤和排序。
-3. 创建或确认策略组名称：`AI`、`STREAMING`、`APPLE`、`MICROSOFT`、`PROXY`、`DIRECT`、`REJECT`、`FINAL`。
+3. 创建或确认策略组名称：`AI`、`STREAMING`、`APPLE`、`MICROSOFT`、`GOOGLE`、`DEVELOPER`、`GAMES`、`DOWNLOAD`、`PROXY`、`DIRECT`、`REJECT`、`FINAL`。
 4. 根据客户端类型引用 `dist/templates/` 中的生成模板片段。
 5. 在客户端订阅中使用 Sub-Store 生成的最终配置。
 
