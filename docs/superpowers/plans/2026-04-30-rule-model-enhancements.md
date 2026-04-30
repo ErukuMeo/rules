@@ -118,11 +118,11 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `docs/sub-store.md`
 - Modify: `docs/superpowers/plans/2026-04-30-rule-model-enhancements.md`
 
-- [ ] **Step 1: Document the enhanced category fields**
+- [x] **Step 1: Document the enhanced category fields**
 
 Explain `priority`, `enabled`, `source`, and `notes`, including how disabled categories affect generated outputs.
 
-- [ ] **Step 2: Run final verification**
+- [x] **Step 2: Run final verification**
 
 Run:
 
@@ -136,7 +136,7 @@ git -c safe.directory=E:/Work/Projects/rules status --short
 
 Expected: generation is current, tests pass, script compiles, and only documentation/plan files are staged for the final docs commit.
 
-- [ ] **Step 3: Commit and push**
+- [x] **Step 3: Commit and push**
 
 Run:
 
@@ -146,6 +146,6 @@ git commit -m "docs: document rule model metadata"
 git push https://github.com/ErukuMeo/rules.git main
 ```
 
-- [ ] **Step 4: Report status**
+- [x] **Step 4: Report status**
 
 List pushed commits, verification commands, and any recommended next phase.

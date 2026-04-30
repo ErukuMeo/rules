@@ -64,6 +64,31 @@ FINAL
 
 规则只负责把请求分到这些策略组；每个策略组背后的节点由 Sub-Store 管理。
 
+## 源规则元数据
+
+`source/rules.json` 中每个分类可以带这些维护字段：
+
+```json
+{
+  "id": "ai",
+  "priority": 10,
+  "enabled": true,
+  "source": "manual",
+  "notes": "High-priority AI services that commonly require proxy routing."
+}
+```
+
+- `priority` 控制生成顺序，数字越小越靠前。
+- `enabled=false` 会让该分类从所有 `dist/` 产物中消失，适合临时停用规则。
+- `source` 用于记录规则来源。
+- `notes` 用于记录维护说明。
+
+修改这些字段后需要重新运行：
+
+```bash
+python scripts/generate_rules.py
+```
+
 ## 推荐使用流程
 
 1. 在 Sub-Store 中导入节点订阅。

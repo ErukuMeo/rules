@@ -69,12 +69,29 @@ python -m unittest discover -s tests -v
   "id": "ai",
   "description": "AI services and model providers",
   "policy": "AI",
+  "priority": 10,
+  "enabled": true,
+  "source": "manual",
+  "notes": "High-priority AI services that commonly require proxy routing.",
   "rules": [
     { "type": "domain_suffix", "value": "openai.com" },
     { "type": "domain_suffix", "value": "chatgpt.com" }
   ]
 }
 ```
+
+分类字段说明：
+
+- `id`：分类 ID，只允许小写字母、数字和连字符，例如 `ai`、`streaming`。
+- `description`：分类说明，会出现在部分生成文件的注释中。
+- `policy`：命中的策略组名称，必须是 `policies` 中声明过的值。
+- `priority`：可选整数，数字越小越靠前；未填写时按声明顺序自动分配默认优先级。
+- `enabled`：可选布尔值，设为 `false` 时该分类不会进入任何生成产物。
+- `source`：可选字符串，用于记录规则来源，例如 `manual`。
+- `notes`：可选字符串，用于记录维护说明。
+- `rules`：规则列表。
+
+`policies.final` 是必需字段，用于生成 Mihomo `MATCH` 和 sing-box `final`。
 
 当前支持的规则类型：
 
