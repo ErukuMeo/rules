@@ -26,7 +26,6 @@ dist/manifest.md                     便于浏览器查看的发布索引
 dist/templates/                      由源规则生成的客户端模板片段
 templates/                           静态模板参考和说明
 tests/                               生成器测试
-docs/                                Sub-Store 接入说明和实施计划
 ```
 
 ## 使用方式
@@ -60,7 +59,7 @@ python scripts/generate_rules.py --check
 python -m unittest discover -s tests -v
 ```
 
-6. 提交 `source/`、`scripts/`、`dist/`、`templates/`、`docs/` 和测试文件。
+6. 提交 `source/`、`scripts/`、`dist/`、`templates/` 和测试文件。
 
 ## 源规则格式
 
