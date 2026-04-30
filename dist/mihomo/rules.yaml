@@ -3,6 +3,10 @@ rules:
   - RULE-SET,streaming,STREAMING
   - RULE-SET,apple,APPLE
   - RULE-SET,microsoft,MICROSOFT
+  - RULE-SET,google,GOOGLE
+  - RULE-SET,developer,DEVELOPER
+  - RULE-SET,games,GAMES
+  - RULE-SET,download,DOWNLOAD
   - RULE-SET,cn,DIRECT
   - RULE-SET,proxy,PROXY
   - RULE-SET,direct,DIRECT

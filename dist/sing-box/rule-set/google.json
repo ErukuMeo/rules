@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "google.com",
+        "googleapis.com",
+        "gstatic.com",
+        "googleusercontent.com",
+        "gmail.com",
+        "google.com.hk"
+      ]
+    }
+  ],
+  "version": 3
+}

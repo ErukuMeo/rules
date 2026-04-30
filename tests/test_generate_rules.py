@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.generate_rules import SourceError, build_outputs, load_source
+from scripts.generate_rules import SOURCE_FILE, SourceError, build_outputs, load_source
 
 
 def write_source(payload):
@@ -39,6 +39,27 @@ def minimal_source():
 
 
 class GenerateRulesTests(unittest.TestCase):
+    def test_real_source_contains_expected_baseline_categories(self):
+        source = load_source(SOURCE_FILE)
+
+        self.assertEqual(
+            [category.id for category in source.categories],
+            [
+                "ai",
+                "streaming",
+                "apple",
+                "microsoft",
+                "google",
+                "developer",
+                "games",
+                "download",
+                "cn",
+                "proxy",
+                "direct",
+                "reject",
+            ],
+        )
+
     def test_load_source_accepts_minimal_valid_source(self):
         directory, path = write_source(minimal_source())
         with directory:

@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "github-releases.githubusercontent.com",
+        "objects.githubusercontent.com",
+        "sourceforge.net",
+        "fosshub.com",
+        "archive.org"
+      ]
+    }
+  ],
+  "version": 3
+}

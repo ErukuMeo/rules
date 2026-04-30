@@ -1,0 +1,7 @@
+# Google services
+DOMAIN-SUFFIX,google.com,GOOGLE
+DOMAIN-SUFFIX,googleapis.com,GOOGLE
+DOMAIN-SUFFIX,gstatic.com,GOOGLE
+DOMAIN-SUFFIX,googleusercontent.com,GOOGLE
+DOMAIN-SUFFIX,gmail.com,GOOGLE
+DOMAIN-SUFFIX,google.com.hk,GOOGLE

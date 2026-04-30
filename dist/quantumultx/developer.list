@@ -1,0 +1,8 @@
+# Developer tools and package registries
+DOMAIN-SUFFIX,docker.com,DEVELOPER
+DOMAIN-SUFFIX,docker.io,DEVELOPER
+DOMAIN-SUFFIX,npmjs.com,DEVELOPER
+DOMAIN-SUFFIX,pypi.org,DEVELOPER
+DOMAIN-SUFFIX,pythonhosted.org,DEVELOPER
+DOMAIN-SUFFIX,jetbrains.com,DEVELOPER
+DOMAIN-SUFFIX,visualstudio.com,DEVELOPER

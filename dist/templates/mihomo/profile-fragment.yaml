@@ -30,6 +30,34 @@ rule-providers:
     url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/microsoft.yaml
     path: ./ruleset/microsoft.yaml
     interval: 86400
+  google:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/google.yaml
+    path: ./ruleset/google.yaml
+    interval: 86400
+  developer:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/developer.yaml
+    path: ./ruleset/developer.yaml
+    interval: 86400
+  games:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/games.yaml
+    path: ./ruleset/games.yaml
+    interval: 86400
+  download:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/download.yaml
+    path: ./ruleset/download.yaml
+    interval: 86400
   cn:
     type: http
     behavior: classical
@@ -64,6 +92,10 @@ rules:
   - RULE-SET,streaming,STREAMING
   - RULE-SET,apple,APPLE
   - RULE-SET,microsoft,MICROSOFT
+  - RULE-SET,google,GOOGLE
+  - RULE-SET,developer,DEVELOPER
+  - RULE-SET,games,GAMES
+  - RULE-SET,download,DOWNLOAD
   - RULE-SET,cn,DIRECT
   - RULE-SET,proxy,PROXY
   - RULE-SET,direct,DIRECT

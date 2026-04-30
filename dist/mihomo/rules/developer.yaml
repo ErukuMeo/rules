@@ -1,0 +1,9 @@
+# Developer tools and package registries
+payload:
+  - "DOMAIN-SUFFIX,docker.com"
+  - "DOMAIN-SUFFIX,docker.io"
+  - "DOMAIN-SUFFIX,npmjs.com"
+  - "DOMAIN-SUFFIX,pypi.org"
+  - "DOMAIN-SUFFIX,pythonhosted.org"
+  - "DOMAIN-SUFFIX,jetbrains.com"
+  - "DOMAIN-SUFFIX,visualstudio.com"

@@ -1,0 +1,6 @@
+# Download and release distribution services
+DOMAIN-SUFFIX,github-releases.githubusercontent.com,DOWNLOAD
+DOMAIN-SUFFIX,objects.githubusercontent.com,DOWNLOAD
+DOMAIN-SUFFIX,sourceforge.net,DOWNLOAD
+DOMAIN-SUFFIX,fosshub.com,DOWNLOAD
+DOMAIN-SUFFIX,archive.org,DOWNLOAD

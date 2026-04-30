@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "steampowered.com",
+        "steamcommunity.com",
+        "steamstatic.com",
+        "epicgames.com",
+        "battle.net",
+        "xboxlive.com",
+        "playstation.net"
+      ]
+    }
+  ],
+  "version": 3
+}

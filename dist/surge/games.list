@@ -1,0 +1,8 @@
+# Game platforms and related services
+DOMAIN-SUFFIX,steampowered.com,GAMES
+DOMAIN-SUFFIX,steamcommunity.com,GAMES
+DOMAIN-SUFFIX,steamstatic.com,GAMES
+DOMAIN-SUFFIX,epicgames.com,GAMES
+DOMAIN-SUFFIX,battle.net,GAMES
+DOMAIN-SUFFIX,xboxlive.com,GAMES
+DOMAIN-SUFFIX,playstation.net,GAMES

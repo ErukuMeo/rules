@@ -10,6 +10,10 @@
     "streaming": "STREAMING",
     "apple": "APPLE",
     "microsoft": "MICROSOFT",
+    "google": "GOOGLE",
+    "developer": "DEVELOPER",
+    "games": "GAMES",
+    "download": "DOWNLOAD",
     "cn": "DIRECT",
     "proxy": "PROXY",
     "direct": "DIRECT",
@@ -86,10 +90,79 @@
       ]
     },
     {
+      "id": "google",
+      "description": "Google services",
+      "policy": "GOOGLE",
+      "priority": 50,
+      "enabled": true,
+      "source": "manual",
+      "notes": "Google search, account, API, and static asset domains.",
+      "rules": [
+        { "type": "domain_suffix", "value": "google.com" },
+        { "type": "domain_suffix", "value": "googleapis.com" },
+        { "type": "domain_suffix", "value": "gstatic.com" },
+        { "type": "domain_suffix", "value": "googleusercontent.com" },
+        { "type": "domain_suffix", "value": "gmail.com" },
+        { "type": "domain_suffix", "value": "google.com.hk" }
+      ]
+    },
+    {
+      "id": "developer",
+      "description": "Developer tools and package registries",
+      "policy": "DEVELOPER",
+      "priority": 60,
+      "enabled": true,
+      "source": "manual",
+      "notes": "Common developer services that benefit from a dedicated policy group.",
+      "rules": [
+        { "type": "domain_suffix", "value": "docker.com" },
+        { "type": "domain_suffix", "value": "docker.io" },
+        { "type": "domain_suffix", "value": "npmjs.com" },
+        { "type": "domain_suffix", "value": "pypi.org" },
+        { "type": "domain_suffix", "value": "pythonhosted.org" },
+        { "type": "domain_suffix", "value": "jetbrains.com" },
+        { "type": "domain_suffix", "value": "visualstudio.com" }
+      ]
+    },
+    {
+      "id": "games",
+      "description": "Game platforms and related services",
+      "policy": "GAMES",
+      "priority": 70,
+      "enabled": true,
+      "source": "manual",
+      "notes": "Game stores and platform services kept separate for latency testing.",
+      "rules": [
+        { "type": "domain_suffix", "value": "steampowered.com" },
+        { "type": "domain_suffix", "value": "steamcommunity.com" },
+        { "type": "domain_suffix", "value": "steamstatic.com" },
+        { "type": "domain_suffix", "value": "epicgames.com" },
+        { "type": "domain_suffix", "value": "battle.net" },
+        { "type": "domain_suffix", "value": "xboxlive.com" },
+        { "type": "domain_suffix", "value": "playstation.net" }
+      ]
+    },
+    {
+      "id": "download",
+      "description": "Download and release distribution services",
+      "policy": "DOWNLOAD",
+      "priority": 80,
+      "enabled": true,
+      "source": "manual",
+      "notes": "Large download and release distribution domains.",
+      "rules": [
+        { "type": "domain_suffix", "value": "github-releases.githubusercontent.com" },
+        { "type": "domain_suffix", "value": "objects.githubusercontent.com" },
+        { "type": "domain_suffix", "value": "sourceforge.net" },
+        { "type": "domain_suffix", "value": "fosshub.com" },
+        { "type": "domain_suffix", "value": "archive.org" }
+      ]
+    },
+    {
       "id": "cn",
       "description": "Mainland China direct rules",
       "policy": "DIRECT",
-      "priority": 50,
+      "priority": 90,
       "enabled": true,
       "source": "manual",
       "notes": "Direct routing for mainland China geo and common domestic services.",
@@ -106,7 +179,7 @@
       "id": "proxy",
       "description": "General proxy rules",
       "policy": "PROXY",
-      "priority": 60,
+      "priority": 100,
       "enabled": true,
       "source": "manual",
       "notes": "General non-China proxy fallback rules.",
@@ -122,7 +195,7 @@
       "id": "direct",
       "description": "Always direct rules",
       "policy": "DIRECT",
-      "priority": 70,
+      "priority": 110,
       "enabled": true,
       "source": "manual",
       "notes": "Localhost and private networks must bypass proxy handling.",
@@ -138,7 +211,7 @@
       "id": "reject",
       "description": "Advertising and tracking reject rules",
       "policy": "REJECT",
-      "priority": 80,
+      "priority": 120,
       "enabled": true,
       "source": "manual",
       "notes": "Basic advertising and analytics rejection rules.",

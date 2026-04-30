@@ -37,7 +37,7 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `dist/**`
 - Modify: `docs/superpowers/plans/2026-04-30-rule-content-expansion.md`
 
-- [ ] **Step 1: Write failing source coverage test**
+- [x] **Step 1: Write failing source coverage test**
 
 Add a test asserting the real source contains these category IDs:
 
@@ -47,7 +47,7 @@ ai, streaming, apple, microsoft, google, developer, games, download, cn, proxy, 
 
 Expected initial result: test fails before source categories are added.
 
-- [ ] **Step 2: Add policies and categories**
+- [x] **Step 2: Add policies and categories**
 
 Add policy mappings and category entries:
 
@@ -60,7 +60,7 @@ download -> DOWNLOAD
 
 Use priorities between `microsoft` and `cn` for new categories so specific service categories run before broad `cn/proxy/direct/reject` fallbacks.
 
-- [ ] **Step 3: Regenerate and verify**
+- [x] **Step 3: Regenerate and verify**
 
 Run:
 
@@ -73,7 +73,7 @@ python -m py_compile scripts/generate_rules.py
 
 Expected: generated files are current, tests pass, and script compiles.
 
-- [ ] **Step 4: Commit and push**
+- [x] **Step 4: Commit and push**
 
 Run:
 

@@ -32,6 +32,34 @@
     {
       "download_detour": "PROXY",
       "format": "source",
+      "tag": "google",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/google.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "developer",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/developer.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "games",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/games.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "download",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/download.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
       "tag": "cn",
       "type": "remote",
       "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/cn.json"
@@ -74,6 +102,22 @@
     {
       "outbound": "MICROSOFT",
       "rule_set": "microsoft"
+    },
+    {
+      "outbound": "GOOGLE",
+      "rule_set": "google"
+    },
+    {
+      "outbound": "DEVELOPER",
+      "rule_set": "developer"
+    },
+    {
+      "outbound": "GAMES",
+      "rule_set": "games"
+    },
+    {
+      "outbound": "DOWNLOAD",
+      "rule_set": "download"
     },
     {
       "outbound": "DIRECT",

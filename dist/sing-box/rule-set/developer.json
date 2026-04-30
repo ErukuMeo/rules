@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "docker.com",
+        "docker.io",
+        "npmjs.com",
+        "pypi.org",
+        "pythonhosted.org",
+        "jetbrains.com",
+        "visualstudio.com"
+      ]
+    }
+  ],
+  "version": 3
+}

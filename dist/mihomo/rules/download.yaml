@@ -1,0 +1,7 @@
+# Download and release distribution services
+payload:
+  - "DOMAIN-SUFFIX,github-releases.githubusercontent.com"
+  - "DOMAIN-SUFFIX,objects.githubusercontent.com"
+  - "DOMAIN-SUFFIX,sourceforge.net"
+  - "DOMAIN-SUFFIX,fosshub.com"
+  - "DOMAIN-SUFFIX,archive.org"
