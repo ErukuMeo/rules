@@ -19,7 +19,7 @@
 
 Document the release index tasks, verification commands, and expected commits.
 
-- [ ] **Step 2: Commit and push the plan**
+- [x] **Step 2: Commit and push the plan**
 
 Run:
 
@@ -37,7 +37,7 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `dist/**`
 - Modify: `docs/superpowers/plans/2026-04-30-release-index.md`
 
-- [ ] **Step 1: Write failing manifest test**
+- [x] **Step 1: Write failing manifest test**
 
 Add a test that loads a minimal source, builds outputs, and asserts:
 
@@ -59,7 +59,7 @@ self.assertRegex(manifest["artifacts"]["dist/mihomo/rules/ai.yaml"]["sha256"], r
 
 Expected initial result: the test fails because `dist/manifest.json` is not generated.
 
-- [ ] **Step 2: Implement manifest generation**
+- [x] **Step 2: Implement manifest generation**
 
 Add helper functions in `scripts/generate_rules.py`:
 
@@ -98,7 +98,7 @@ outputs[DIST_DIR / "manifest.md"] = render_manifest_markdown(source, manifest)
 
 The fixed timestamp is intentional: output must be deterministic for `--check`.
 
-- [ ] **Step 3: Run generation and tests**
+- [x] **Step 3: Run generation and tests**
 
 Run:
 
@@ -111,7 +111,7 @@ python -m py_compile scripts/generate_rules.py
 
 Expected: generated files are current, tests pass, and script compiles.
 
-- [ ] **Step 4: Commit and push**
+- [x] **Step 4: Commit and push**
 
 Run:
 

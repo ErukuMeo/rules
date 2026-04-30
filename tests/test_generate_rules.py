@@ -215,6 +215,28 @@ class GenerateRulesTests(unittest.TestCase):
         self.assertIn("| ai |", markdown)
         self.assertIn("https://raw.githubusercontent.com/example/rules/main/dist/sing-box/rule-set/ai.json", markdown)
 
+    def test_build_outputs_generates_release_manifest(self):
+        directory, path = write_source(minimal_source())
+        with directory:
+            source = load_source(path)
+            outputs = build_outputs(source)
+
+        manifest_path = next(path for path in outputs if path.as_posix().endswith("dist/manifest.json"))
+        manifest = json.loads(outputs[manifest_path])
+
+        self.assertEqual(manifest["repository"]["owner"], "example")
+        self.assertEqual(manifest["version"], 1)
+        self.assertEqual(manifest["categories"], ["ai"])
+        self.assertIn("generatedAt", manifest)
+        self.assertEqual(manifest["generatedAt"], "1970-01-01T00:00:00Z")
+        self.assertIn("dist/mihomo/rules/ai.yaml", manifest["artifacts"])
+        self.assertEqual(
+            manifest["artifacts"]["dist/mihomo/rules/ai.yaml"]["url"],
+            "https://raw.githubusercontent.com/example/rules/main/dist/mihomo/rules/ai.yaml",
+        )
+        self.assertGreater(manifest["artifacts"]["dist/mihomo/rules/ai.yaml"]["size"], 0)
+        self.assertRegex(manifest["artifacts"]["dist/mihomo/rules/ai.yaml"]["sha256"], r"^[0-9a-f]{64}$")
+
 
 if __name__ == "__main__":
     unittest.main()

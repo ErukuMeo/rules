@@ -1,0 +1,78 @@
+# Release Manifest
+
+Generated release index for rule artifacts.
+
+- Repository: `ErukuMeo/rules`
+- Branch: `main`
+- Categories: ai, streaming, apple, microsoft, google, developer, games, download, cn, proxy, direct, reject
+
+## Artifacts
+
+| Path | Size | SHA-256 | URL |
+| --- | ---: | --- | --- |
+| `dist/loon/ai.list` | 247 | `3c0cbe2ed1da28e31d0df6765207e32788439fb3783b98e6a36dc612b301421e` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/ai.list |
+| `dist/loon/apple.list` | 148 | `66fb3c17ebe3afd23292b6462dfce3430dce61886a2d5c6e11cd70b54b3a8e03` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/apple.list |
+| `dist/loon/cn.list` | 186 | `f2398cf1011b388a0213156453140fd72f2646d071be754babbf95323ad22aa5` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/cn.list |
+| `dist/loon/developer.list` | 297 | `aaed2b948c77b198686b8eb7234783f010c32eaebf13c6273d9b05edcc0b1334` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/developer.list |
+| `dist/loon/direct.list` | 158 | `7aae97fca56989a8922f654021c79cbd79a549ea7b94223ea75e79351d33cdea` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/direct.list |
+| `dist/loon/download.list` | 268 | `c1b0cbef50668cf724f9520b306f976ad20a1b1af580077e25d3c4f4407c1ac6` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/download.list |
+| `dist/loon/games.list` | 284 | `fe9ce3e75fee66787de0c233875061848947b0beeba3ea057d6d1639685ad690` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/games.list |
+| `dist/loon/google.list` | 228 | `158ca55ac95a6f69b107e7d60aba7038cca0514662c824bf90aa94babcedb095` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/google.list |
+| `dist/loon/microsoft.list` | 266 | `1b9b3f0a489af95188974b89baba64a7c76d7a451e66b6ee785293d663b5a188` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/microsoft.list |
+| `dist/loon/proxy.list` | 174 | `b0f9e623a7dddbe1fc0fc41fd92635dd9e2fa7be6c269cd6ecc813033c4f1184` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/proxy.list |
+| `dist/loon/reject.list` | 194 | `07dd5ff3c463c2e08430d5bbd652a97f346522accaf1d0078c7997f23d7a878d` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/reject.list |
+| `dist/loon/streaming.list` | 292 | `9b26eefe601e7eed23589c0ffc98ee7475cccfb7d47f1d4de36aec8d1fa4379b` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/streaming.list |
+| `dist/mihomo/rule-providers.yaml` | 2548 | `a3dca75539394f6329926b72b224c17cc5db3f89103752890982cbaf4f39f081` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rule-providers.yaml |
+| `dist/mihomo/rules.yaml` | 351 | `dc908606696670953d4b6b2551e7fdcc55851cf9a83e0ec854ea5a9f455d2894` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules.yaml |
+| `dist/mihomo/rules/ai.yaml` | 277 | `0b30003612b276a11bc326ac2ef882c4b66a4ab224d9a7d44ef77c5747bbd373` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/ai.yaml |
+| `dist/mihomo/rules/apple.yaml` | 157 | `0f8fb87a74ca60c1d88f72191126ea98f24b08fea2412d845ec8b5a1ea099f0c` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/apple.yaml |
+| `dist/mihomo/rules/cn.yaml` | 189 | `712bf2e89e7f2546e838d63e8c468ef611088b7563212b8ce078a0a3d285b1dd` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/cn.yaml |
+| `dist/mihomo/rules/developer.yaml` | 278 | `925564f2679614405096e4feb9c772d57c2967065ff2f1d70d9554b9e790ef95` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/developer.yaml |
+| `dist/mihomo/rules/direct.yaml` | 162 | `53b490025bc008c1ac00afd6fa6d19adc675d331866d7df0b75492bd3b9725a3` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/direct.yaml |
+| `dist/mihomo/rules/download.yaml` | 262 | `cc5d4a5fe19e5278fc19cb28d7eccfb79a59e2bc25a77da6faaad9d05d9360cd` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/download.yaml |
+| `dist/mihomo/rules/games.yaml` | 293 | `c6e14a38e9b2b0bedf596faa6ada086a69e96565326931191a6f4511131b9ae4` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/games.yaml |
+| `dist/mihomo/rules/google.yaml` | 231 | `85d66154d63ed44db335d7ce2ca25538ed7f6451e89f2bb43d074418d3a5d34e` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/google.yaml |
+| `dist/mihomo/rules/microsoft.yaml` | 251 | `42217a628dc14fe63505288d909d73a20f5c1d84cbcc5125a9d34df11e1ec7de` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/microsoft.yaml |
+| `dist/mihomo/rules/proxy.yaml` | 183 | `1176dc926a5febb0fc7c0ea0c16df0728997180861687dcd30c732b7ef811c9a` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/proxy.yaml |
+| `dist/mihomo/rules/reject.yaml` | 199 | `9a6712633900b87f06e93678ac84877d334d2158f277078403959c852e5f1afb` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/reject.yaml |
+| `dist/mihomo/rules/streaming.yaml` | 273 | `3dbd504bf01bec77a95391c0d328e7a96f229ef5c0cf95417ce4010348289978` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/streaming.yaml |
+| `dist/quantumultx/ai.list` | 247 | `3c0cbe2ed1da28e31d0df6765207e32788439fb3783b98e6a36dc612b301421e` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/ai.list |
+| `dist/quantumultx/apple.list` | 148 | `66fb3c17ebe3afd23292b6462dfce3430dce61886a2d5c6e11cd70b54b3a8e03` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/apple.list |
+| `dist/quantumultx/cn.list` | 186 | `f2398cf1011b388a0213156453140fd72f2646d071be754babbf95323ad22aa5` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/cn.list |
+| `dist/quantumultx/developer.list` | 297 | `aaed2b948c77b198686b8eb7234783f010c32eaebf13c6273d9b05edcc0b1334` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/developer.list |
+| `dist/quantumultx/direct.list` | 158 | `7aae97fca56989a8922f654021c79cbd79a549ea7b94223ea75e79351d33cdea` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/direct.list |
+| `dist/quantumultx/download.list` | 268 | `c1b0cbef50668cf724f9520b306f976ad20a1b1af580077e25d3c4f4407c1ac6` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/download.list |
+| `dist/quantumultx/games.list` | 284 | `fe9ce3e75fee66787de0c233875061848947b0beeba3ea057d6d1639685ad690` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/games.list |
+| `dist/quantumultx/google.list` | 228 | `158ca55ac95a6f69b107e7d60aba7038cca0514662c824bf90aa94babcedb095` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/google.list |
+| `dist/quantumultx/microsoft.list` | 266 | `1b9b3f0a489af95188974b89baba64a7c76d7a451e66b6ee785293d663b5a188` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/microsoft.list |
+| `dist/quantumultx/proxy.list` | 174 | `b0f9e623a7dddbe1fc0fc41fd92635dd9e2fa7be6c269cd6ecc813033c4f1184` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/proxy.list |
+| `dist/quantumultx/reject.list` | 194 | `07dd5ff3c463c2e08430d5bbd652a97f346522accaf1d0078c7997f23d7a878d` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/reject.list |
+| `dist/quantumultx/streaming.list` | 292 | `9b26eefe601e7eed23589c0ffc98ee7475cccfb7d47f1d4de36aec8d1fa4379b` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/streaming.list |
+| `dist/sing-box/rule-set/ai.json` | 252 | `75af532fed368b4143525a4d758f3c578089cc33333495fd33bdfdc3be0a570d` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/ai.json |
+| `dist/sing-box/rule-set/apple.json` | 176 | `85ee9360462613f5b6e5feb20c9fe6bec228daa13db1f65abc1ea3b4b4581bd6` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/apple.json |
+| `dist/sing-box/rule-set/cn.json` | 243 | `c47e2c5a7cda706672bb2b586b44f5ee45411f38ae9380b9855b14c008fb0e5b` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/cn.json |
+| `dist/sing-box/rule-set/developer.json` | 246 | `3d2769483e2a9aa020b71f24e1ee68f33c94a114ac1c767c517416d8b35db8ce` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/developer.json |
+| `dist/sing-box/rule-set/direct.json` | 218 | `4f9801c456da2b838cce820bd70bcfb04b45be10d35ef1dd56df6cca7ecc92cb` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/direct.json |
+| `dist/sing-box/rule-set/download.json` | 244 | `7320923e46fdd2ba4505f08a170af01c5e5cd678c5e755259db36c534e6b6ef6` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/download.json |
+| `dist/sing-box/rule-set/games.json` | 264 | `1d051d852d5a71494d2455b401e6a749edcdc28e648f4dda485f16cc05311399` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/games.json |
+| `dist/sing-box/rule-set/google.json` | 231 | `4039abcc25e6149e8aca1947bcc0efc0698cdd2a758d78f0b749a0830a6c040c` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/google.json |
+| `dist/sing-box/rule-set/microsoft.json` | 237 | `f2b0d61248b3d6a77f814d43fd033237f9350e8a96cce2ceaa81ef44285664d4` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/microsoft.json |
+| `dist/sing-box/rule-set/proxy.json` | 221 | `6e9e285ffd0370a7582ced3c7141e6ed32615a3267707a4bb0c5ea4b69b84bef` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/proxy.json |
+| `dist/sing-box/rule-set/reject.json` | 228 | `a2fcbaf189ad27c5a194c10e0423ebcafa7d9ed03405d162c67eaefafe339318` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/reject.json |
+| `dist/sing-box/rule-set/streaming.json` | 248 | `7557cd881951538d9a2b00f29274d4a30d04d6c2856cbc2471d8ff0a193fc870` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/streaming.json |
+| `dist/sub-store/rule-urls.json` | 5471 | `f7831e931824abd8684e14b701e733d12b3d106c471dbe9113ddb40cf6cbcd3c` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sub-store/rule-urls.json |
+| `dist/surge/ai.list` | 247 | `3c0cbe2ed1da28e31d0df6765207e32788439fb3783b98e6a36dc612b301421e` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/ai.list |
+| `dist/surge/apple.list` | 148 | `66fb3c17ebe3afd23292b6462dfce3430dce61886a2d5c6e11cd70b54b3a8e03` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/apple.list |
+| `dist/surge/cn.list` | 186 | `f2398cf1011b388a0213156453140fd72f2646d071be754babbf95323ad22aa5` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/cn.list |
+| `dist/surge/developer.list` | 297 | `aaed2b948c77b198686b8eb7234783f010c32eaebf13c6273d9b05edcc0b1334` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/developer.list |
+| `dist/surge/direct.list` | 158 | `7aae97fca56989a8922f654021c79cbd79a549ea7b94223ea75e79351d33cdea` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/direct.list |
+| `dist/surge/download.list` | 268 | `c1b0cbef50668cf724f9520b306f976ad20a1b1af580077e25d3c4f4407c1ac6` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/download.list |
+| `dist/surge/games.list` | 284 | `fe9ce3e75fee66787de0c233875061848947b0beeba3ea057d6d1639685ad690` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/games.list |
+| `dist/surge/google.list` | 228 | `158ca55ac95a6f69b107e7d60aba7038cca0514662c824bf90aa94babcedb095` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/google.list |
+| `dist/surge/microsoft.list` | 266 | `1b9b3f0a489af95188974b89baba64a7c76d7a451e66b6ee785293d663b5a188` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/microsoft.list |
+| `dist/surge/proxy.list` | 174 | `b0f9e623a7dddbe1fc0fc41fd92635dd9e2fa7be6c269cd6ecc813033c4f1184` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/proxy.list |
+| `dist/surge/reject.list` | 194 | `07dd5ff3c463c2e08430d5bbd652a97f346522accaf1d0078c7997f23d7a878d` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/reject.list |
+| `dist/surge/streaming.list` | 292 | `9b26eefe601e7eed23589c0ffc98ee7475cccfb7d47f1d4de36aec8d1fa4379b` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/streaming.list |
+| `dist/templates/mihomo/profile-fragment.yaml` | 3024 | `ed9edee5861d33a1062eaeba50cf9a85b35544dadd41cd1eebd033d1b525db24` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/mihomo/profile-fragment.yaml |
+| `dist/templates/sing-box/route-fragment.json` | 3568 | `23fdfc26a75438f675b45bca3fbc824343b6d97f03edeef9d4402c7b99c5b22e` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/sing-box/route-fragment.json |
+| `dist/templates/sub-store/rule-urls.md` | 5681 | `744ea90e045cd2d7009e0c2f3f03cb86c7f33f3a64668c291130faea8d25df79` | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/sub-store/rule-urls.md |

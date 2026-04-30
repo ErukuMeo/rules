@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -207,6 +208,11 @@ def yaml_quote(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
+def raw_url(source: Source, relative_path: str) -> str:
+    repo = source.repository
+    return f"https://raw.githubusercontent.com/{repo['owner']}/{repo['name']}/{repo['branch']}/{relative_path}"
+
+
 def render_mihomo_provider(category: Category) -> str:
     lines = [
         f"# {category.description}",
@@ -365,6 +371,46 @@ def render_sub_store_rule_urls_markdown(source: Source) -> str:
     return "\n".join(lines) + "\n"
 
 
+def build_manifest(source: Source, outputs: dict[Path, str]) -> dict[str, Any]:
+    artifacts: dict[str, dict[str, Any]] = {}
+    for path, content in sorted(outputs.items(), key=lambda item: item[0].as_posix()):
+        encoded = content.encode("utf-8")
+        relative_path = path.relative_to(ROOT).as_posix()
+        artifacts[relative_path] = {
+            "url": raw_url(source, relative_path),
+            "size": len(encoded),
+            "sha256": hashlib.sha256(encoded).hexdigest(),
+        }
+
+    return {
+        "version": source.version,
+        "repository": source.repository,
+        "generatedAt": "1970-01-01T00:00:00Z",
+        "categories": [category.id for category in source.categories],
+        "artifacts": artifacts,
+    }
+
+
+def render_manifest_markdown(source: Source, manifest: dict[str, Any]) -> str:
+    lines = [
+        "# Release Manifest",
+        "",
+        "Generated release index for rule artifacts.",
+        "",
+        f"- Repository: `{source.repository['owner']}/{source.repository['name']}`",
+        f"- Branch: `{source.repository['branch']}`",
+        f"- Categories: {', '.join(manifest['categories'])}",
+        "",
+        "## Artifacts",
+        "",
+        "| Path | Size | SHA-256 | URL |",
+        "| --- | ---: | --- | --- |",
+    ]
+    for path, artifact in manifest["artifacts"].items():
+        lines.append(f"| `{path}` | {artifact['size']} | `{artifact['sha256']}` | {artifact['url']} |")
+    return "\n".join(lines) + "\n"
+
+
 def build_outputs(source: Source) -> dict[Path, str]:
     outputs: dict[Path, str] = {
         DIST_DIR / "mihomo" / "rule-providers.yaml": render_mihomo_rule_providers(source),
@@ -381,6 +427,10 @@ def build_outputs(source: Source) -> dict[Path, str]:
         outputs[DIST_DIR / "loon" / f"{category.id}.list"] = render_classical_list(category)
         outputs[DIST_DIR / "quantumultx" / f"{category.id}.list"] = render_classical_list(category)
         outputs[DIST_DIR / "sing-box" / "rule-set" / f"{category.id}.json"] = render_sing_box_rule_set(category)
+
+    manifest = build_manifest(source, outputs)
+    outputs[DIST_DIR / "manifest.json"] = json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    outputs[DIST_DIR / "manifest.md"] = render_manifest_markdown(source, manifest)
 
     return outputs
 
