@@ -21,6 +21,8 @@ dist/loon/                           Loon 规则列表
 dist/quantumultx/                    Quantumult X 规则列表
 dist/sing-box/rule-set/              sing-box source rule-set JSON
 dist/sub-store/rule-urls.json        供 Sub-Store 或模板引用的 URL 索引
+dist/manifest.json                   机器可读的发布索引，包含 Raw URL、大小和 SHA-256
+dist/manifest.md                     便于浏览器查看的发布索引
 dist/templates/                      由源规则生成的客户端模板片段
 templates/                           静态模板参考和说明
 tests/                               生成器测试
@@ -161,7 +163,11 @@ Sub-Store：
 ```text
 dist/sub-store/rule-urls.json
 dist/templates/sub-store/rule-urls.md
+dist/manifest.json
+dist/manifest.md
 ```
+
+`dist/manifest.json` 适合脚本、Sub-Store 扩展逻辑或自动化检查读取；`dist/manifest.md` 适合在 GitHub 页面中快速查看所有发布产物、Raw URL、文件大小和 SHA-256。
 
 ## 生成模板与静态模板
 

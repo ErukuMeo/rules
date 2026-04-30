@@ -128,7 +128,7 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `docs/sub-store.md`
 - Modify: `docs/superpowers/plans/2026-04-30-release-index.md`
 
-- [ ] **Step 1: Document manifest files**
+- [x] **Step 1: Document manifest files**
 
 Document these generated files:
 
@@ -139,7 +139,7 @@ dist/manifest.md
 
 Explain that `manifest.json` is machine-readable and `manifest.md` is for quick browser inspection.
 
-- [ ] **Step 2: Run final verification**
+- [x] **Step 2: Run final verification**
 
 Run:
 
@@ -152,7 +152,7 @@ git -c safe.directory=E:/Work/Projects/rules status --short
 
 Expected: generated files are current, tests pass, script compiles, and only documentation/plan files are staged for the docs commit.
 
-- [ ] **Step 3: Commit and push**
+- [x] **Step 3: Commit and push**
 
 Run:
 
@@ -162,6 +162,6 @@ git commit -m "docs: document release manifest"
 git push https://github.com/ErukuMeo/rules.git main
 ```
 
-- [ ] **Step 4: Report status**
+- [x] **Step 4: Report status**
 
 List pushed commits, verification commands, and the recommended next phase.

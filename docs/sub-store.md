@@ -45,7 +45,11 @@ python scripts/generate_rules.py
 ```text
 dist/sub-store/rule-urls.json
 dist/templates/sub-store/rule-urls.md
+dist/manifest.json
+dist/manifest.md
 ```
+
+`dist/manifest.json` 是机器可读发布索引，包含每个生成文件的 Raw URL、文件大小和 SHA-256；`dist/manifest.md` 用于在 GitHub 页面中人工检查发布结果。
 
 ## 策略组命名
 
