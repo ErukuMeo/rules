@@ -13,17 +13,18 @@
 ## 目录结构
 
 ```text
-source/rules.json              源规则，唯一需要手工维护的规则数据
-scripts/generate_rules.py      规则生成器和校验器
-dist/mihomo/                   Mihomo / Clash.Meta rule-providers 和 rules
-dist/surge/                    Surge 规则列表
-dist/loon/                     Loon 规则列表
-dist/quantumultx/              Quantumult X 规则列表
-dist/sing-box/rule-set/        sing-box source rule-set JSON
-dist/sub-store/rule-urls.json  供 Sub-Store 或模板引用的 URL 索引
-templates/                     可合并到客户端配置里的示例片段
-tests/                         生成器测试
-docs/                          Sub-Store 接入说明和实施计划
+source/rules.json                    源规则，唯一需要手工维护的规则数据
+scripts/generate_rules.py            规则生成器和校验器
+dist/mihomo/                         Mihomo / Clash.Meta rule-providers 和 rules
+dist/surge/                          Surge 规则列表
+dist/loon/                           Loon 规则列表
+dist/quantumultx/                    Quantumult X 规则列表
+dist/sing-box/rule-set/              sing-box source rule-set JSON
+dist/sub-store/rule-urls.json        供 Sub-Store 或模板引用的 URL 索引
+dist/templates/                      由源规则生成的客户端模板片段
+templates/                           静态模板参考和说明
+tests/                               生成器测试
+docs/                                Sub-Store 接入说明和实施计划
 ```
 
 ## 使用方式
@@ -119,18 +120,40 @@ Sub-Store：
   引用本仓库生成的规则 URL
 ```
 
+建议流程：
+
+1. 在 Sub-Store 中导入机场或节点订阅。
+2. 对节点做重命名、地区识别、过滤和排序。
+3. 创建或确认策略组名称：`AI`、`STREAMING`、`APPLE`、`MICROSOFT`、`PROXY`、`DIRECT`、`REJECT`、`FINAL`。
+4. 根据客户端类型引用 `dist/templates/` 中的生成模板片段。
+5. 在客户端订阅中使用 Sub-Store 生成的最终配置。
+
 生成后的 URL 索引在：
 
 ```text
 dist/sub-store/rule-urls.json
+dist/templates/sub-store/rule-urls.md
 ```
 
-例如 Mihomo 规则入口：
+## 生成模板与静态模板
+
+`dist/templates/` 是脚本生成的模板片段，会自动使用 `source/rules.json` 中的仓库地址和分类顺序：
 
 ```text
-https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rule-providers.yaml
-https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules.yaml
+dist/templates/mihomo/profile-fragment.yaml
+dist/templates/sing-box/route-fragment.json
+dist/templates/sub-store/rule-urls.md
 ```
+
+`templates/` 是静态参考文件，用于说明和手工对照：
+
+```text
+templates/mihomo/profile-fragment.yaml
+templates/sing-box/route-fragment.json
+templates/sub-store/README.md
+```
+
+日常使用优先引用 `dist/templates/`，因为它们由源规则自动生成，不会和仓库配置脱节。
 
 ## 各客户端产物
 
@@ -140,13 +163,10 @@ https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules.yaml
 dist/mihomo/rule-providers.yaml
 dist/mihomo/rules.yaml
 dist/mihomo/rules/<category>.yaml
+dist/templates/mihomo/profile-fragment.yaml
 ```
 
-可以将 `rule-providers.yaml` 和 `rules.yaml` 合并到 Sub-Store 生成的 Mihomo 配置中，也可以参考：
-
-```text
-templates/mihomo/profile-fragment.yaml
-```
+可以将 `dist/templates/mihomo/profile-fragment.yaml` 合并到 Sub-Store 生成的 Mihomo 配置中。它已经包含 `rule-providers` 和 `rules` 片段。
 
 ### Surge / Loon / Quantumult X
 
@@ -166,13 +186,10 @@ DOMAIN-SUFFIX,openai.com,AI
 
 ```text
 dist/sing-box/rule-set/<category>.json
+dist/templates/sing-box/route-fragment.json
 ```
 
-这些文件是 source rule-set JSON。可以参考：
-
-```text
-templates/sing-box/route-fragment.json
-```
+`dist/templates/sing-box/route-fragment.json` 可合并到 sing-box 配置的 `route` 对象中。规则集当前使用 source rule-set JSON。
 
 如果后续需要 `.srs` 二进制规则集，可以在 GitHub Actions 中增加 sing-box 下载和编译步骤。
 
@@ -188,6 +205,7 @@ templates/sing-box/route-fragment.json
 
 ```bash
 python scripts/generate_rules.py --check
+python -m unittest discover -s tests -v
 ```
 
 如果 `source/rules.json` 修改后没有同步更新 `dist/`，CI 会失败，避免发布过期规则。

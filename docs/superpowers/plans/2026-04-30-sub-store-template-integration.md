@@ -87,15 +87,15 @@ git push https://github.com/ErukuMeo/rules.git main
 - Modify: `templates/sub-store/README.md`
 - Modify: `docs/superpowers/plans/2026-04-30-sub-store-template-integration.md`
 
-- [ ] **Step 1: Document generated template locations**
+- [x] **Step 1: Document generated template locations**
 
 Explain that `dist/templates/` contains generated, repository-aware fragments and `templates/` contains editable static references.
 
-- [ ] **Step 2: Add Sub-Store usage sequence**
+- [x] **Step 2: Add Sub-Store usage sequence**
 
 Document the expected flow: import nodes in Sub-Store, create policy names, merge generated fragment, update client subscription.
 
-- [ ] **Step 3: Verify docs and generated outputs**
+- [x] **Step 3: Verify docs and generated outputs**
 
 Run:
 
@@ -106,7 +106,7 @@ python -m unittest discover -s tests -v
 
 Expected: docs changes do not affect generated output, and tests pass.
 
-- [ ] **Step 4: Commit and push documentation update**
+- [x] **Step 4: Commit and push documentation update**
 
 Run:
 
