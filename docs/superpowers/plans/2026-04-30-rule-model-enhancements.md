@@ -38,7 +38,7 @@ Expected: GitHub `main` contains this plan before implementation changes start.
 - Modify: `tests/test_generate_rules.py`
 - Modify: `docs/superpowers/plans/2026-04-30-rule-model-enhancements.md`
 
-- [ ] **Step 1: Write failing tests**
+- [x] **Step 1: Write failing tests**
 
 Add tests for:
 
@@ -52,11 +52,11 @@ source and notes must be strings when present
 
 Expected initial result: at least one new test fails because the current generator does not implement these rules.
 
-- [ ] **Step 2: Implement schema changes**
+- [x] **Step 2: Implement schema changes**
 
 Update dataclasses and `load_source()` to parse and validate `priority`, `enabled`, `source`, and `notes`. Keep missing optional fields backward-compatible.
 
-- [ ] **Step 3: Verify**
+- [x] **Step 3: Verify**
 
 Run:
 
@@ -68,7 +68,7 @@ python -m py_compile scripts/generate_rules.py
 
 Expected: tests pass, generated files remain current, and the script compiles.
 
-- [ ] **Step 4: Commit and push**
+- [x] **Step 4: Commit and push**
 
 Run:
 

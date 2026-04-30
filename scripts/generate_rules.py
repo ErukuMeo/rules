@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import sys
 from dataclasses import dataclass
@@ -15,6 +16,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_FILE = ROOT / "source" / "rules.json"
 DIST_DIR = ROOT / "dist"
+CATEGORY_ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
 SUPPORTED_TYPES = {
     "domain",
@@ -56,6 +58,10 @@ class Category:
     description: str
     policy: str
     rules: tuple[Rule, ...]
+    priority: int
+    enabled: bool
+    source: str | None
+    notes: str | None
 
 
 @dataclass(frozen=True)
@@ -92,6 +98,8 @@ def load_source(path: Path) -> Source:
     policies = raw.get("policies")
     if not isinstance(policies, dict) or not policies:
         raise SourceError("policies must be a non-empty object")
+    if not isinstance(policies.get("final"), str) or not policies["final"].strip():
+        raise SourceError("policies.final must be a non-empty string")
 
     categories_raw = raw.get("categories")
     if not isinstance(categories_raw, list) or not categories_raw:
@@ -104,6 +112,8 @@ def load_source(path: Path) -> Source:
             raise SourceError("each category must be an object")
 
         category_id = require_string(category_raw, "id")
+        if not CATEGORY_ID_PATTERN.fullmatch(category_id):
+            raise SourceError(f"invalid category id: {category_id}")
         if category_id in category_ids:
             raise SourceError(f"duplicate category id: {category_id}")
         category_ids.add(category_id)
@@ -112,6 +122,10 @@ def load_source(path: Path) -> Source:
         policy = require_string(category_raw, "policy")
         if policy not in set(policies.values()):
             raise SourceError(f"category {category_id} uses undefined policy: {policy}")
+        priority = optional_int(category_raw, "priority", len(categories) * 100)
+        enabled = optional_bool(category_raw, "enabled", True)
+        source = optional_string(category_raw, "source")
+        notes = optional_string(category_raw, "notes")
 
         rules_raw = category_raw.get("rules")
         if not isinstance(rules_raw, list) or not rules_raw:
@@ -132,7 +146,10 @@ def load_source(path: Path) -> Source:
             seen_rules.add(key)
             rules.append(Rule(rule_type, value))
 
-        categories.append(Category(category_id, description, policy, tuple(rules)))
+        if enabled:
+            categories.append(Category(category_id, description, policy, tuple(rules), priority, enabled, source, notes))
+
+    categories.sort(key=lambda category: (category.priority, category.id))
 
     return Source(
         version=raw["version"],
@@ -147,6 +164,36 @@ def require_string(obj: dict[str, Any], key: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise SourceError(f"{key} must be a non-empty string")
     return value.strip()
+
+
+def optional_string(obj: dict[str, Any], key: str) -> str | None:
+    if key not in obj:
+        return None
+    value = obj[key]
+    if not isinstance(value, str):
+        raise SourceError(f"{key} must be a string when present")
+    value = value.strip()
+    return value or None
+
+
+def optional_bool(obj: dict[str, Any], key: str, default: bool) -> bool:
+    if key not in obj:
+        return default
+    value = obj[key]
+    if not isinstance(value, bool):
+        raise SourceError(f"{key} must be a boolean when present")
+    return value
+
+
+def optional_int(obj: dict[str, Any], key: str, default: int) -> int:
+    if key not in obj:
+        return default
+    value = obj[key]
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise SourceError(f"{key} must be an integer when present")
+    if value < 0:
+        raise SourceError(f"{key} must be greater than or equal to 0")
+    return value
 
 
 def classical_rule(rule: Rule, policy: str | None = None) -> str:
