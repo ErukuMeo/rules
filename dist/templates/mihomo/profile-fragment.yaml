@@ -1,0 +1,71 @@
+# Generated Mihomo / Clash.Meta fragment for Sub-Store profile merging.
+# Policy group names must match source/rules.json.
+
+rule-providers:
+  ai:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/ai.yaml
+    path: ./ruleset/ai.yaml
+    interval: 86400
+  streaming:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/streaming.yaml
+    path: ./ruleset/streaming.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/apple.yaml
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/microsoft.yaml
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+  cn:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/cn.yaml
+    path: ./ruleset/cn.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/direct.yaml
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/reject.yaml
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,ai,AI
+  - RULE-SET,streaming,STREAMING
+  - RULE-SET,apple,APPLE
+  - RULE-SET,microsoft,MICROSOFT
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,reject,REJECT
+  - MATCH,FINAL

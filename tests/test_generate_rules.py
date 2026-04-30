@@ -73,6 +73,39 @@ class GenerateRulesTests(unittest.TestCase):
         payload = json.loads(outputs[sub_store_path])
         self.assertNotIn("note", payload)
 
+    def test_build_outputs_generates_repository_aware_template_fragments(self):
+        directory, path = write_source(minimal_source())
+        with directory:
+            source = load_source(path)
+            outputs = build_outputs(source)
+
+        rendered = {str(path).replace("\\", "/"): content for path, content in outputs.items()}
+
+        mihomo = next(
+            content
+            for path, content in rendered.items()
+            if path.endswith("dist/templates/mihomo/profile-fragment.yaml")
+        )
+        self.assertIn("url: https://raw.githubusercontent.com/example/rules/main/dist/mihomo/rules/ai.yaml", mihomo)
+        self.assertIn("- RULE-SET,ai,AI", mihomo)
+
+        sing_box = next(
+            content
+            for path, content in rendered.items()
+            if path.endswith("dist/templates/sing-box/route-fragment.json")
+        )
+        sing_box_payload = json.loads(sing_box)
+        self.assertEqual(sing_box_payload["final"], "FINAL")
+        self.assertEqual(sing_box_payload["rules"][0], {"rule_set": "ai", "outbound": "AI"})
+
+        markdown = next(
+            content
+            for path, content in rendered.items()
+            if path.endswith("dist/templates/sub-store/rule-urls.md")
+        )
+        self.assertIn("| ai |", markdown)
+        self.assertIn("https://raw.githubusercontent.com/example/rules/main/dist/sing-box/rule-set/ai.json", markdown)
+
 
 if __name__ == "__main__":
     unittest.main()

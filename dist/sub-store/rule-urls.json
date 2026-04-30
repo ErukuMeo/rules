@@ -47,5 +47,10 @@
     "proxy": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/proxy.list",
     "reject": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/reject.list",
     "streaming": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/streaming.list"
+  },
+  "templates": {
+    "mihomo": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/mihomo/profile-fragment.yaml",
+    "sing-box": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/sing-box/route-fragment.json",
+    "sub-store": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/sub-store/rule-urls.md"
   }
 }

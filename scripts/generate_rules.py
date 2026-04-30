@@ -232,10 +232,90 @@ def render_sub_store_urls(source: Source) -> str:
         "sing-box": {
             category.id: f"{base_url}/sing-box/rule-set/{category.id}.json" for category in source.categories
         },
+        "templates": {
+            "mihomo": f"{base_url}/templates/mihomo/profile-fragment.yaml",
+            "sing-box": f"{base_url}/templates/sing-box/route-fragment.json",
+            "sub-store": f"{base_url}/templates/sub-store/rule-urls.md",
+        },
     }
     if repo["owner"] == "YOUR_GITHUB_USERNAME":
         payload["note"] = "Replace repository.owner/name/branch in source/rules.json before publishing."
     return json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
+def render_mihomo_profile_fragment(source: Source) -> str:
+    return "\n".join(
+        [
+            "# Generated Mihomo / Clash.Meta fragment for Sub-Store profile merging.",
+            "# Policy group names must match source/rules.json.",
+            "",
+            render_mihomo_rule_providers(source).rstrip(),
+            "",
+            render_mihomo_rules(source).rstrip(),
+        ]
+    ) + "\n"
+
+
+def render_sing_box_route_fragment(source: Source) -> str:
+    repo = source.repository
+    base_url = f"https://raw.githubusercontent.com/{repo['owner']}/{repo['name']}/{repo['branch']}/dist/sing-box/rule-set"
+    payload = {
+        "rule_set": [
+            {
+                "tag": category.id,
+                "type": "remote",
+                "format": "source",
+                "url": f"{base_url}/{category.id}.json",
+                "download_detour": "PROXY",
+            }
+            for category in source.categories
+        ],
+        "rules": [
+            {
+                "rule_set": category.id,
+                "outbound": category.policy,
+            }
+            for category in source.categories
+        ],
+        "final": source.policies["final"],
+    }
+    return json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
+def render_sub_store_rule_urls_markdown(source: Source) -> str:
+    repo = source.repository
+    base_url = f"https://raw.githubusercontent.com/{repo['owner']}/{repo['name']}/{repo['branch']}/dist"
+    lines = [
+        "# Generated Rule URLs",
+        "",
+        "These URLs are generated from `source/rules.json` and can be copied into Sub-Store templates.",
+        "",
+        "## Template Fragments",
+        "",
+        "| Client | URL |",
+        "| --- | --- |",
+        f"| Mihomo | {base_url}/templates/mihomo/profile-fragment.yaml |",
+        f"| sing-box | {base_url}/templates/sing-box/route-fragment.json |",
+        "",
+        "## Category Rule Sets",
+        "",
+        "| Category | Mihomo | Surge | Loon | Quantumult X | sing-box |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for category in source.categories:
+        lines.append(
+            " | ".join(
+                [
+                    f"| {category.id}",
+                    f"{base_url}/mihomo/rules/{category.id}.yaml",
+                    f"{base_url}/surge/{category.id}.list",
+                    f"{base_url}/loon/{category.id}.list",
+                    f"{base_url}/quantumultx/{category.id}.list",
+                    f"{base_url}/sing-box/rule-set/{category.id}.json |",
+                ]
+            )
+        )
+    return "\n".join(lines) + "\n"
 
 
 def build_outputs(source: Source) -> dict[Path, str]:
@@ -243,6 +323,9 @@ def build_outputs(source: Source) -> dict[Path, str]:
         DIST_DIR / "mihomo" / "rule-providers.yaml": render_mihomo_rule_providers(source),
         DIST_DIR / "mihomo" / "rules.yaml": render_mihomo_rules(source),
         DIST_DIR / "sub-store" / "rule-urls.json": render_sub_store_urls(source),
+        DIST_DIR / "templates" / "mihomo" / "profile-fragment.yaml": render_mihomo_profile_fragment(source),
+        DIST_DIR / "templates" / "sing-box" / "route-fragment.json": render_sing_box_route_fragment(source),
+        DIST_DIR / "templates" / "sub-store" / "rule-urls.md": render_sub_store_rule_urls_markdown(source),
     }
 
     for category in source.categories:

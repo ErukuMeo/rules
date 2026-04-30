@@ -1,0 +1,95 @@
+{
+  "final": "FINAL",
+  "rule_set": [
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "ai",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/ai.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "streaming",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/streaming.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "apple",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/apple.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "microsoft",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/microsoft.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "cn",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/cn.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "proxy",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/proxy.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "direct",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/direct.json"
+    },
+    {
+      "download_detour": "PROXY",
+      "format": "source",
+      "tag": "reject",
+      "type": "remote",
+      "url": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/reject.json"
+    }
+  ],
+  "rules": [
+    {
+      "outbound": "AI",
+      "rule_set": "ai"
+    },
+    {
+      "outbound": "STREAMING",
+      "rule_set": "streaming"
+    },
+    {
+      "outbound": "APPLE",
+      "rule_set": "apple"
+    },
+    {
+      "outbound": "MICROSOFT",
+      "rule_set": "microsoft"
+    },
+    {
+      "outbound": "DIRECT",
+      "rule_set": "cn"
+    },
+    {
+      "outbound": "PROXY",
+      "rule_set": "proxy"
+    },
+    {
+      "outbound": "DIRECT",
+      "rule_set": "direct"
+    },
+    {
+      "outbound": "REJECT",
+      "rule_set": "reject"
+    }
+  ]
+}

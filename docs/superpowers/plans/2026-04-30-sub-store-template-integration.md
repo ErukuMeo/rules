@@ -40,7 +40,7 @@ Expected: GitHub `main` contains this plan before implementation changes start.
 - Generate: `dist/templates/sing-box/route-fragment.json`
 - Generate: `dist/templates/sub-store/rule-urls.md`
 
-- [ ] **Step 1: Write failing tests for generated templates**
+- [x] **Step 1: Write failing tests for generated templates**
 
 Add tests that assert `build_outputs()` includes:
 
@@ -52,11 +52,11 @@ dist/templates/sub-store/rule-urls.md
 
 Expected initial result: tests fail because the generator does not emit these paths yet.
 
-- [ ] **Step 2: Implement generated templates**
+- [x] **Step 2: Implement generated templates**
 
 Add renderer functions that use `source.repository`, `source.categories`, and `source.policies` rather than hard-coded repository URLs.
 
-- [ ] **Step 3: Regenerate and verify**
+- [x] **Step 3: Regenerate and verify**
 
 Run:
 
@@ -69,7 +69,7 @@ python -m py_compile scripts/generate_rules.py
 
 Expected: generated files are current and all tests pass.
 
-- [ ] **Step 4: Commit and push generated template outputs**
+- [x] **Step 4: Commit and push generated template outputs**
 
 Run:
 

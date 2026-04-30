@@ -1,0 +1,23 @@
+# Generated Rule URLs
+
+These URLs are generated from `source/rules.json` and can be copied into Sub-Store templates.
+
+## Template Fragments
+
+| Client | URL |
+| --- | --- |
+| Mihomo | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/mihomo/profile-fragment.yaml |
+| sing-box | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/templates/sing-box/route-fragment.json |
+
+## Category Rule Sets
+
+| Category | Mihomo | Surge | Loon | Quantumult X | sing-box |
+| --- | --- | --- | --- | --- | --- |
+| ai | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/ai.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/ai.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/ai.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/ai.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/ai.json |
+| streaming | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/streaming.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/streaming.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/streaming.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/streaming.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/streaming.json |
+| apple | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/apple.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/apple.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/apple.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/apple.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/apple.json |
+| microsoft | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/microsoft.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/microsoft.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/microsoft.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/microsoft.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/microsoft.json |
+| cn | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/cn.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/cn.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/cn.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/cn.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/cn.json |
+| proxy | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/proxy.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/proxy.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/proxy.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/proxy.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/proxy.json |
+| direct | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/direct.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/direct.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/direct.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/direct.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/direct.json |
+| reject | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules/reject.yaml | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/reject.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/reject.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/reject.list | https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/reject.json |
