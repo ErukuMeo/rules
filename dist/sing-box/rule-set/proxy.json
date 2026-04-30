@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "google.com",
+        "telegram.org",
+        "x.com",
+        "twitter.com"
+      ],
+      "geosite": [
+        "geolocation-!cn"
+      ]
+    }
+  ],
+  "version": 3
+}

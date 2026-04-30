@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "apple.com",
+        "icloud.com",
+        "mzstatic.com",
+        "itunes.apple.com"
+      ]
+    }
+  ],
+  "version": 3
+}

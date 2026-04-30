@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "microsoft.com",
+        "windowsupdate.com",
+        "office.com",
+        "office365.com",
+        "github.com",
+        "githubusercontent.com"
+      ]
+    }
+  ],
+  "version": 3
+}

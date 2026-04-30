@@ -1,0 +1,6 @@
+# Advertising and tracking reject rules
+payload:
+  - "DOMAIN-SUFFIX,doubleclick.net"
+  - "DOMAIN-SUFFIX,googlesyndication.com"
+  - "DOMAIN-SUFFIX,google-analytics.com"
+  - "DOMAIN-KEYWORD,adservice"

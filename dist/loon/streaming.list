@@ -1,0 +1,8 @@
+# Global streaming media services
+DOMAIN-SUFFIX,netflix.com,STREAMING
+DOMAIN-SUFFIX,nflxvideo.net,STREAMING
+DOMAIN-SUFFIX,disneyplus.com,STREAMING
+DOMAIN-SUFFIX,hulu.com,STREAMING
+DOMAIN-SUFFIX,spotify.com,STREAMING
+DOMAIN-SUFFIX,youtube.com,STREAMING
+DOMAIN-SUFFIX,googlevideo.com,STREAMING

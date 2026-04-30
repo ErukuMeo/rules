@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "netflix.com",
+        "nflxvideo.net",
+        "disneyplus.com",
+        "hulu.com",
+        "spotify.com",
+        "youtube.com",
+        "googlevideo.com"
+      ]
+    }
+  ],
+  "version": 3
+}

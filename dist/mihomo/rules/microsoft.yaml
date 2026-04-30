@@ -1,0 +1,8 @@
+# Microsoft and GitHub services
+payload:
+  - "DOMAIN-SUFFIX,microsoft.com"
+  - "DOMAIN-SUFFIX,windowsupdate.com"
+  - "DOMAIN-SUFFIX,office.com"
+  - "DOMAIN-SUFFIX,office365.com"
+  - "DOMAIN-SUFFIX,github.com"
+  - "DOMAIN-SUFFIX,githubusercontent.com"

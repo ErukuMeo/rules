@@ -1,0 +1,9 @@
+# Global streaming media services
+payload:
+  - "DOMAIN-SUFFIX,netflix.com"
+  - "DOMAIN-SUFFIX,nflxvideo.net"
+  - "DOMAIN-SUFFIX,disneyplus.com"
+  - "DOMAIN-SUFFIX,hulu.com"
+  - "DOMAIN-SUFFIX,spotify.com"
+  - "DOMAIN-SUFFIX,youtube.com"
+  - "DOMAIN-SUFFIX,googlevideo.com"

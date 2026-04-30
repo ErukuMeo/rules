@@ -1,0 +1,5 @@
+# Apple services
+DOMAIN-SUFFIX,apple.com,APPLE
+DOMAIN-SUFFIX,icloud.com,APPLE
+DOMAIN-SUFFIX,mzstatic.com,APPLE
+DOMAIN-SUFFIX,itunes.apple.com,APPLE

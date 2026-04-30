@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "repository": {
+    "owner": "ErukuMeo",
+    "name": "rules",
+    "branch": "main"
+  },
+  "policies": {
+    "ai": "AI",
+    "streaming": "STREAMING",
+    "apple": "APPLE",
+    "microsoft": "MICROSOFT",
+    "cn": "DIRECT",
+    "proxy": "PROXY",
+    "direct": "DIRECT",
+    "reject": "REJECT",
+    "final": "FINAL"
+  },
+  "categories": [
+    {
+      "id": "ai",
+      "description": "AI services and model providers",
+      "policy": "AI",
+      "rules": [
+        { "type": "domain_suffix", "value": "openai.com" },
+        { "type": "domain_suffix", "value": "chatgpt.com" },
+        { "type": "domain_suffix", "value": "oaistatic.com" },
+        { "type": "domain_suffix", "value": "oaiusercontent.com" },
+        { "type": "domain_suffix", "value": "anthropic.com" },
+        { "type": "domain_suffix", "value": "claude.ai" },
+        { "type": "domain_suffix", "value": "perplexity.ai" }
+      ]
+    },
+    {
+      "id": "streaming",
+      "description": "Global streaming media services",
+      "policy": "STREAMING",
+      "rules": [
+        { "type": "domain_suffix", "value": "netflix.com" },
+        { "type": "domain_suffix", "value": "nflxvideo.net" },
+        { "type": "domain_suffix", "value": "disneyplus.com" },
+        { "type": "domain_suffix", "value": "hulu.com" },
+        { "type": "domain_suffix", "value": "spotify.com" },
+        { "type": "domain_suffix", "value": "youtube.com" },
+        { "type": "domain_suffix", "value": "googlevideo.com" }
+      ]
+    },
+    {
+      "id": "apple",
+      "description": "Apple services",
+      "policy": "APPLE",
+      "rules": [
+        { "type": "domain_suffix", "value": "apple.com" },
+        { "type": "domain_suffix", "value": "icloud.com" },
+        { "type": "domain_suffix", "value": "mzstatic.com" },
+        { "type": "domain_suffix", "value": "itunes.apple.com" }
+      ]
+    },
+    {
+      "id": "microsoft",
+      "description": "Microsoft and GitHub services",
+      "policy": "MICROSOFT",
+      "rules": [
+        { "type": "domain_suffix", "value": "microsoft.com" },
+        { "type": "domain_suffix", "value": "windowsupdate.com" },
+        { "type": "domain_suffix", "value": "office.com" },
+        { "type": "domain_suffix", "value": "office365.com" },
+        { "type": "domain_suffix", "value": "github.com" },
+        { "type": "domain_suffix", "value": "githubusercontent.com" }
+      ]
+    },
+    {
+      "id": "cn",
+      "description": "Mainland China direct rules",
+      "policy": "DIRECT",
+      "rules": [
+        { "type": "geosite", "value": "cn" },
+        { "type": "geoip", "value": "cn" },
+        { "type": "domain_suffix", "value": "bilibili.com" },
+        { "type": "domain_suffix", "value": "qq.com" },
+        { "type": "domain_suffix", "value": "taobao.com" },
+        { "type": "domain_suffix", "value": "jd.com" }
+      ]
+    },
+    {
+      "id": "proxy",
+      "description": "General proxy rules",
+      "policy": "PROXY",
+      "rules": [
+        { "type": "geosite", "value": "geolocation-!cn" },
+        { "type": "domain_suffix", "value": "google.com" },
+        { "type": "domain_suffix", "value": "telegram.org" },
+        { "type": "domain_suffix", "value": "x.com" },
+        { "type": "domain_suffix", "value": "twitter.com" }
+      ]
+    },
+    {
+      "id": "direct",
+      "description": "Always direct rules",
+      "policy": "DIRECT",
+      "rules": [
+        { "type": "domain", "value": "localhost" },
+        { "type": "ip_cidr", "value": "10.0.0.0/8" },
+        { "type": "ip_cidr", "value": "172.16.0.0/12" },
+        { "type": "ip_cidr", "value": "192.168.0.0/16" },
+        { "type": "ip_cidr", "value": "127.0.0.0/8" }
+      ]
+    },
+    {
+      "id": "reject",
+      "description": "Advertising and tracking reject rules",
+      "policy": "REJECT",
+      "rules": [
+        { "type": "domain_suffix", "value": "doubleclick.net" },
+        { "type": "domain_suffix", "value": "googlesyndication.com" },
+        { "type": "domain_suffix", "value": "google-analytics.com" },
+        { "type": "domain_keyword", "value": "adservice" }
+      ]
+    }
+  ]
+}

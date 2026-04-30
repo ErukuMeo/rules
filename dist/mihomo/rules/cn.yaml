@@ -1,0 +1,8 @@
+# Mainland China direct rules
+payload:
+  - "GEOSITE,cn"
+  - "GEOIP,cn"
+  - "DOMAIN-SUFFIX,bilibili.com"
+  - "DOMAIN-SUFFIX,qq.com"
+  - "DOMAIN-SUFFIX,taobao.com"
+  - "DOMAIN-SUFFIX,jd.com"

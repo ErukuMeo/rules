@@ -1,0 +1,10 @@
+rules:
+  - RULE-SET,ai,AI
+  - RULE-SET,streaming,STREAMING
+  - RULE-SET,apple,APPLE
+  - RULE-SET,microsoft,MICROSOFT
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,reject,REJECT
+  - MATCH,FINAL

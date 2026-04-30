@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain_keyword": [
+        "adservice"
+      ],
+      "domain_suffix": [
+        "doubleclick.net",
+        "googlesyndication.com",
+        "google-analytics.com"
+      ]
+    }
+  ],
+  "version": 3
+}

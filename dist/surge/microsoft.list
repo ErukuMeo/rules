@@ -1,0 +1,7 @@
+# Microsoft and GitHub services
+DOMAIN-SUFFIX,microsoft.com,MICROSOFT
+DOMAIN-SUFFIX,windowsupdate.com,MICROSOFT
+DOMAIN-SUFFIX,office.com,MICROSOFT
+DOMAIN-SUFFIX,office365.com,MICROSOFT
+DOMAIN-SUFFIX,github.com,MICROSOFT
+DOMAIN-SUFFIX,githubusercontent.com,MICROSOFT

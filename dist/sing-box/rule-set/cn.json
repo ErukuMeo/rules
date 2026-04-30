@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "bilibili.com",
+        "qq.com",
+        "taobao.com",
+        "jd.com"
+      ],
+      "geoip": [
+        "cn"
+      ],
+      "geosite": [
+        "cn"
+      ]
+    }
+  ],
+  "version": 3
+}

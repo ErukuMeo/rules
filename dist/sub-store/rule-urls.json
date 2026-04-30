@@ -1,0 +1,51 @@
+{
+  "loon": {
+    "ai": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/ai.list",
+    "apple": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/apple.list",
+    "cn": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/cn.list",
+    "direct": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/direct.list",
+    "microsoft": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/microsoft.list",
+    "proxy": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/proxy.list",
+    "reject": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/reject.list",
+    "streaming": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/loon/streaming.list"
+  },
+  "mihomo": {
+    "ruleProviders": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rule-providers.yaml",
+    "rules": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/mihomo/rules.yaml"
+  },
+  "quantumultx": {
+    "ai": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/ai.list",
+    "apple": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/apple.list",
+    "cn": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/cn.list",
+    "direct": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/direct.list",
+    "microsoft": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/microsoft.list",
+    "proxy": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/proxy.list",
+    "reject": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/reject.list",
+    "streaming": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/quantumultx/streaming.list"
+  },
+  "repository": {
+    "branch": "main",
+    "name": "rules",
+    "owner": "ErukuMeo"
+  },
+  "sing-box": {
+    "ai": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/ai.json",
+    "apple": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/apple.json",
+    "cn": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/cn.json",
+    "direct": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/direct.json",
+    "microsoft": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/microsoft.json",
+    "proxy": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/proxy.json",
+    "reject": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/reject.json",
+    "streaming": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/sing-box/rule-set/streaming.json"
+  },
+  "surge": {
+    "ai": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/ai.list",
+    "apple": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/apple.list",
+    "cn": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/cn.list",
+    "direct": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/direct.list",
+    "microsoft": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/microsoft.list",
+    "proxy": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/proxy.list",
+    "reject": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/reject.list",
+    "streaming": "https://raw.githubusercontent.com/ErukuMeo/rules/main/dist/surge/streaming.list"
+  }
+}
