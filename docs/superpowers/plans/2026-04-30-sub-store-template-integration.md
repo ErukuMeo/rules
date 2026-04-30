@@ -121,7 +121,7 @@ git push https://github.com/ErukuMeo/rules.git main
 **Files:**
 - No new files expected.
 
-- [ ] **Step 1: Run full verification**
+- [x] **Step 1: Run full verification**
 
 Run:
 
@@ -135,6 +135,6 @@ git -c safe.directory=E:/Work/Projects/rules status --short
 
 Expected: generation is current, tests pass, script compiles, and working tree is clean.
 
-- [ ] **Step 2: Report commit hashes and status**
+- [x] **Step 2: Report commit hashes and status**
 
 List the commits pushed during this continuation and any remaining recommended next work.
